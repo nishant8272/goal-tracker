@@ -62,7 +62,10 @@ function SignUp() {
       const data = await response.json();
 
       if (response.ok) {
-        alert("Account created successfully! Please sign in.");
+        const successMessage = document.createElement("div");
+      successMessage.className = "success-toast";
+      successMessage.textContent = "✅ account  created successfully!";
+      document.body.appendChild(successMessage);
         navigator("/signin");
       } else {
         alert(data.message || "Registration failed. Please try again.");

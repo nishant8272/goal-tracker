@@ -7,6 +7,7 @@ import SignIn from "./components/SignIn";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import UpdateGoal from "./components/UpdateGoal";
+import Profile from "./components/Profile";
 
 function App() {
   const router = createBrowserRouter([
@@ -92,7 +93,7 @@ function App() {
           </header>
           <main className="app-main">
             <div className="container">
-              <About />
+              <Profile/>
             </div>
           </main>
         </div>

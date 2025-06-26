@@ -56,7 +56,10 @@ function SignIn() {
       if (response.ok && data.token) {
         // Success - store token and redirect
         localStorage.setItem("token", data.token);
-        alert("Sign in successful!");
+        const successMessage = document.createElement("div");
+      successMessage.className = "success-toast";
+      successMessage.textContent = "✅ sign in  successfully!";
+      document.body.appendChild(successMessage);
         navigator("/goals");
       } else {
         // Handle error response
