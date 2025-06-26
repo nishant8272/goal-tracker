@@ -68,14 +68,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <button
-              className="btn btn-secondary"
-              onClick={() => navigator("/update")}
-            >
-              Update Existing Goals
-            </button>
-          </div>
+         
         </div>
       </section>
     </div>

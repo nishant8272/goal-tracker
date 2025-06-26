@@ -18,7 +18,7 @@ function CreateGoal({ data, setdata, onSuccess }) {
       const token = localStorage.getItem("token");
       const realtoken = `Bearer ${token}`;
 
-      const response = await fetch(`http://localhost:8000/api/goals`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/goals`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

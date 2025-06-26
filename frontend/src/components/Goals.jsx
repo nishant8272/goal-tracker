@@ -24,7 +24,7 @@ function Goals() {
     try {
       setIsLoading(true);
       setError("");
-      const response = await fetch("http://localhost:8000/api/goals", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/goals`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +48,7 @@ function Goals() {
 
   const deleteTodo = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/goals/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/goals/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function Goals() {
 
   const toggleGoalStatus = async (id, currentStatus) => {
     try {
-      const response = await fetch(`http://localhost:8000/api/goals/${id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/goals/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

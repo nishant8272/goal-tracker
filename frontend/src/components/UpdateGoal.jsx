@@ -20,7 +20,7 @@ function UpdateGoal({ id, handleGoals, currentText }) {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/goals/${goalId}`,
+        `${process.env.REACT_APP_API_BASE_URL}/api/goals/${goalId}`,
         {
           method: "PUT",
           headers: {
