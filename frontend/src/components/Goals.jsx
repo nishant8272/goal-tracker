@@ -48,7 +48,7 @@ function Goals() {
 
   const deleteTodo = async (id) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/goals/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_BASE_URL}/api/goals/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

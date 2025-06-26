@@ -7,7 +7,7 @@ function About() {
 
  async function aboutme(){
 
-  const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/users/me`,{
+  const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_BASE_URL}/api/users/me`,{
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
