@@ -24,7 +24,7 @@ function Goals() {
     try {
       setIsLoading(true);
       setError("");
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/goals`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_BASE_URL}/api/goals`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function Goals() {
 
   const toggleGoalStatus = async (id, currentStatus) => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/api/goals/${id}`, {
+      const response = await fetch(`${import.meta.env.VITE_REACT_APP_API_BASE_URL}/api/goals/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
